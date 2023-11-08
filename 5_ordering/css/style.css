@@ -26,17 +26,21 @@
 /* Flexbox */
 .container {
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content:center;
 }
 
-.box1 {
-    flex: 10 5 400px;
+.box {
+    flex: 1;
 }
 
-.box2 {
-    flex: 1 1 400px;
+.box3 {
+    order: 1;
 }
 
+.box8 {
+    order: 2;
+}
+
+.box7 {
+    order: -2;
+}
 

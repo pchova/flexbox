@@ -4,7 +4,7 @@
 
 .box {
     color: white;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
     text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
     padding: 10px;
@@ -23,23 +23,26 @@
 .box10 {background: #16a085;} 
 
 
-/* Flexbox */
-/* justify-content: flex-start, 
+/*  more concerned with the cross-axis,
+    column (up and down)
+    align-content: stretch,
+                    flex-start,
                     flex-end,
-                    space-between
-                    space-around
-                    center*/
+                    space-between,
+                    space-around*/
 .container {
     display: flex;
-   justify-content: space-between;
-   border: 10px solid mistyrose;
-   flex-direction: column;
-   height: 150vh;
-    
+    border: 10px solid #7CB9E8;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    align-content: center;
+
+    justify-content: center;
 }
 
-/* when using justify-content with the cross-axis -
-    aka flex-direction: column -
-    you need to specifcy a height.
-    Also maybe make font smaller (font-height here)*/
+.box {
+    width: 33.3333%
+}
+
+
 

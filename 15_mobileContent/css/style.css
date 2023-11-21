@@ -30,10 +30,31 @@ a:hover {
     background: rgba(0,0,0,0.3);
 }
 
+.toggleNav {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
 .wrapper {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 50px;
+}
+
+input {
+    padding: 10px;
+    border: 0;
+}
+
+section, footer {
+    text-align: center;
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    font-weight: 100;
 }
 
 /* Flex Container */
@@ -54,7 +75,7 @@ a:hover {
     flex: 1;
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 1000px) {
 
     .flex-nav ul {
         flex-wrap: wrap;
@@ -72,6 +93,58 @@ a:hover {
 @media all and (max-width: 500px) {
     .flex-nav li {
         flex-basis: 100%;
+    }
+
+    /* Flex-container */
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Flex Item */
+    .wrapper > * {
+        order:  9999;
+    }
+
+    .flex-nav {
+        order: 1;
+    }
+    
+    .toggleNav {
+        display: block;
+    }
+
+    .flex-nav ul {
+        display: none;
+    }
+
+    .flex-nav ul.open {
+        display: flex;
+    }
+
+    .top {
+        order: 2;    
+    }
+
+    .details {
+        order: 3;
+    }
+
+    .signup {
+        order: 4;  
+    }
+
+    form.signup {
+        display: flex;
+        min-height: 20vh;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+
+        /*justify-content: center;
+        align-items: flex-start;
+        align-content: space-around;
+        gap: 13px;*/
     }
 }
 

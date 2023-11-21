@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Flexbox Navigation</title>
+    <title>Flexbox Mobile  Content</title>
     <script src="https://kit.fontawesome.com/19d60e2280.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="wrapper">
+        <header class="top">
+            <h1><a href="#">Polina Chetnikova</a></h1>
+        </header>
         
         <nav class="flex-nav">
+            <a href="#" class="toggleNav">☰ Menu</a>
             <ul>
                 <li><a href="#">Item 01</a></li>
                 <li><a href="#">Item 02</a></li>
@@ -35,9 +39,40 @@
                 </li>
             </ul>
         </nav>
+
+        <section class="hero">
+            <img src="https://picsum.photos/id/11/1000/600">
+        </section>
+
+        <section class="details">
+            <p> A practice website to learn flexbox</p>
+            <p> Hope you enjoy this nice website!</p>
+        </section>
+
+        <section class="signup">
+            <form action="" class="signup">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Email Address">
+                <input type="submit" value="Sign up">
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; Polina Chetnikova</p>
+        </footer>
     </div>
 
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <script>
+
+            $(function() {
+                $('.toggleNav').on('click',function() {
+                    $('.flex-nav ul').toggleClass('open');
+                });
+            });
+
+    </script>
     
 </body>
 </html>
